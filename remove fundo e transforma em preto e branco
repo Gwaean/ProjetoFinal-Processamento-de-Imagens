@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 100
+#include "imagem.h"
+
+//a principio é pra função subtrair uma matriz da outra e tirar o fundo, deixando só o ruído e o carro//
+void removeFundo (Imagem* bg, Imagem* img1, Imagem* img2){
+ int i,j,k;
+Imagem*resultado;
+ for (i=0;i<2;i++){
+   for (j=0;j<img1->largura;j++){
+     for (k=0;k<img1->largura;k++){
+       resultado[i][j][k]=img1[i][j][k]-bg[i][j][k];
+     }}}
+  for (i=0;i<2;i++){
+   for (j=0;j<img2->largura;j++){
+     for (k=0;k<img2->largura;k++){
+       resultado2[i][j][k]=img2[i][j][k]-bg[i][j][k];
+     }}}}
+
+//tem que ver o que essa função recebe como parâmetro. Eu acho que tem que passar os resultados pra ponteiro, mas não tenho certeza, então vou deixar em branco//
+
+
+
+void removeRuido(Imagem*resultado,Imagem*img1,Imagem*img2){
+  int c1,i,j,k;
+//é pra estar tudo zerado, com exceção do ruido e dos carrinhos,então tem que adicionar um contador (eu acho), e se for maior que 30 ou alguma coisa assim ele mantém porque é o carrinho, e se for menor ele tira//
+for (i=0;i<2;i++){
+  for (j=0;j<img1->largura;j++){
+    for (k=0;k<img1->largura;k++){
+
+while (resultado[i][j][k]!=0){
+  if (resultado[i][j+1][k]!=0){
+   else if (resultado[i][j-1][k]!=0){
+    else if (resultado[i][j][k+1]!=0){
+       else if (resultado[i][j][k-1]!=0){
+        else if (resultado[i][j+1][k+1]!=0){
+          else if (resultado[i][j+1][k-1]!=0){
+             else if (resultado[i][j-1][k+1]!=0){
+               else (resultado[i][j-1][k-1]!=0)
+                c1++;
+//se um numero for diferente de zero ele vê o arredor,e a cada numero diferente de zero ele adiciona 1 ao contador. Tem que ver mais ou menos o tamanho dos ruídos e setar um número, tipo, sei lá, 30, e se tiver mais de 30 no contador, a gente sabe que é o carrinho//
+} }}}}}}}}
+
+  
+  
+void pretoebranco (Imagem* bg, Imagem* img1, Imagem* img2);
+{
+unsigned char r,g,b;
+int c1,resultado[i][j][k];
+int c1,resultado[i][j][k];
+
+            if (c1<30)
+            {
+              
+               (x, y,0,0,0);  // exibe um ponto PRETO na imagem
+            }
+            else (x, y, 255,255,255); // exibe um ponto BRANCO na imagem
+        
+     
+  
+}
+  void ConvertToGrayscale(Imagem* bg, Imagem* img1, Imagem* img2);
+  {
+    int x,y,z;
+    int i;
+    for(x=0; x<; x++)
+    {
+        for(y=0; y<; y++)
+        {
+            i = Image.GetPointIntensity(x,y); // Le o TOM DE CINZA DA IMAGEM
+            NewImage.DrawPixel(x, y,i,i,i);  // exibe um ponto CINZA na imagem da direita
+        }
+    }
+
+  }
+void limiarizacao (Imagem* bg, Imagem* img, Imagem* out);
+  int i,j,limiar=0;
+   for(i=0;i<img->altura;i++){
+     for(j=0;j<img->largura){
+      limiar= j *img
+     }
+   }
+
+ //https://www.inf.pucrs.br/~pinho/CG-PPGCC/PraticaOpenGLImagens/ImageClass.html 
+
+ //https://lazarolima.wordpress.com/2010/08/19/processando-imagens-em-grayscale-e-negativo-em-c/
