@@ -4,6 +4,8 @@
 #define N 100
 #include "imagem.h"
 
+// essa aqui foi a primeira versão desse file
+
 //a principio é pra função subtrair uma matriz da outra e tirar o fundo, deixando só o ruído e o carro//
 void removeFundo (Imagem* bg, Imagem* img1, Imagem* img2){
  int i,j,k;
